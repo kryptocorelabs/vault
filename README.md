@@ -1,14 +1,28 @@
 # KryptoCore Vault
 
-KryptoCore Vault is a local password manager from KryptoCoreLabs.
+A local password manager for Windows. Vault stores logins in an encrypted
+`.kcv` file on your device and uses the open-source
+[KryptoCore library](https://github.com/kryptocorelabs/kryptocore).
 
-This repository is the public home for Vault downloads and release notes.
-The Windows x64 desktop and terminal previews are available for synthetic test
-data. The browser extension is still in development.
+[Download the desktop preview](https://github.com/kryptocorelabs/vault/releases/tag/v0.1.0-preview.3) · [All releases](https://github.com/kryptocorelabs/vault/releases) · [Usage and recovery](USAGE.md)
 
-- [Vault Desktop Preview 3](https://github.com/kryptocorelabs/vault/releases/tag/v0.1.0-preview.3)
-- [Vault Terminal Preview 1](https://github.com/kryptocorelabs/vault/releases/tag/v0.1.0-preview.1)
-- [All Vault releases](https://github.com/kryptocorelabs/vault/releases)
-- [KryptoCore encryption library](https://github.com/kryptocorelabs/kryptocore) · open source under MIT
+<img src="vault-desktop.png" alt="Vault desktop showing synthetic logins in a dark tile layout, with the selected password hidden" width="500">
 
-Vault uses the KryptoCore library. Vault's application source is maintained separately.
+*Development build with synthetic logins. The screenshot shows a newer local
+build than the linked download.*
+
+## Try the desktop preview
+
+1. Download and extract the Windows x64 desktop ZIP.
+2. With Python 3.13 x64 installed, run `Setup.cmd` once.
+3. Open `Start-Vault.cmd` and create a test vault.
+
+Use synthetic data for this development preview. See the
+[usage notes](USAGE.md) for how to make and test copies of a vault.
+
+## Project status
+
+This repository hosts Vault downloads and release notes. The application
+source is maintained separately. Firefox integration is in development.
+Use the [security policy](SECURITY.md) to report a suspected vulnerability
+privately.
