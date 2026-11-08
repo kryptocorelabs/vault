@@ -15,6 +15,13 @@ A local password manager for Windows. Vault stores logins in an encrypted
 *Development build with synthetic logins. The screenshot shows a newer local
 build than the linked download.*
 
+## Source and community
+
+[Browse the implementation](https://github.com/kryptocorelabs/vault-source) or
+read the [project charter](https://github.com/kryptocorelabs/kryptocore/blob/main/PROJECT_CHARTER.md). First-party code is MIT licensed;
+dependencies retain their own terms. Contributions and independent review are
+welcome. Source visibility does not change the documented preview limits.
+
 ## Standalone development build
 
 The current local design build is `KryptoCore-Vault-Portable.exe`, containing
@@ -41,8 +48,8 @@ persistent installation; signature enforcement and restart persistence passed
 in Firefox 159.0.1. Windows Authenticode signing is still pending. Full current
 desktop/browser workflow testing is a separate release check.
 
-This repository hosts Vault downloads and release notes. The application
-source is maintained separately.
+This repository hosts Vault downloads and release notes. The application and Firefox
+[source are open under MIT](https://github.com/kryptocorelabs/vault-source).
 Use the [security policy](SECURITY.md) to report a suspected vulnerability
 privately.
 
