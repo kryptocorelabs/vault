@@ -28,6 +28,11 @@ read the [project charter](https://github.com/kryptocorelabs/kryptocore/blob/mai
 dependencies retain their own terms. Contributions and independent review are
 welcome. Source visibility does not change the documented preview limits.
 
+The unreleased [recovery hardening](RECOVERY-HARDENING.md) rotates the internal
+data key when resetting a password. It does not revoke old vault copies. Existing
+download assets have not been replaced; use the documented source/build identity
+to establish whether a build includes this fix. See the [threat model](THREAT_MODEL.md).
+
 ## Standalone development build
 
 The current local design build is `KryptoCore-Vault-Portable.exe`, containing
