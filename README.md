@@ -1,5 +1,7 @@
 # KryptoCore Vault
 
+[Unreleased design preview](DESIGN.md)
+
 A local password manager for Windows. Vault stores logins in an encrypted
 `.kcv` file on your device and uses the open-source
 [KryptoCore library](https://github.com/kryptocorelabs/kryptocore).
