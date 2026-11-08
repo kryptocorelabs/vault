@@ -48,6 +48,10 @@ Use a KCV3-capable Rescue build for its files; published preview.3 is insufficie
 source: deliberate export, new-vault creation with fresh key material, entry and
 recovery facts, and local backup/file-age hints. Existing release assets are unchanged.
 
+Development builds also offer [password changes and SHA-256 fingerprints](ACCESS-AND-INTEGRITY.md).
+Optional re-keying creates a new key and emergency sheet for the current file;
+old copies retain their old access. A fingerprint is not a signature or malware scan.
+
 The current local design build is `KryptoCore-Vault-Portable.exe`, containing
 Python, Qt, the Rust backend and the Firefox native host. It starts without
 running Setup.cmd. This is an unreleased local build; the older public preview
