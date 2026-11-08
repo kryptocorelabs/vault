@@ -41,6 +41,9 @@ CI artifacts are evaluation builds; existing download releases remain unchanged.
 
 ## Standalone development build
 
+The [optional KCV3 epoch profile](EPOCHS.md) is an unreleased copy-based opt-in.
+Use a KCV3-capable Rescue build for its files; published preview.3 is insufficient.
+
 The current local design build is `KryptoCore-Vault-Portable.exe`, containing
 Python, Qt, the Rust backend and the Firefox native host. It starts without
 running Setup.cmd. This is an unreleased local build; the older public preview
