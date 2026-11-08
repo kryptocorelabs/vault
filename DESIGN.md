@@ -17,8 +17,10 @@ a two-identity Messenger workflow using an offline loopback proxy. They do not
 establish accessibility certification or public-Tor delivery for this build.
 Windows design executables remain unsigned.
 
-Firefox 0.1.16 is the matching unsigned design package. Chrome and Edge are
-planned separately; see [browser support](BROWSERS.md).
+Firefox 0.1.16 is now available as a [Mozilla-signed XPI](FIREFOX.md), with
+permanent installation and restart persistence checked in a disposable Firefox
+profile. The Windows design executables remain unreleased and unsigned.
+Chrome and Edge are planned separately; see [browser support](BROWSERS.md).
 
 ![Firefox popup layout with a synthetic site](assets/firefox-design-preview.png)
 

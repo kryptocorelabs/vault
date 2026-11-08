@@ -1,0 +1,1 @@
+c7b14f08a86aeb84028a3d3e870489fe39876f2c08c095384dbce595532a4df9  KryptoCore-Vault-Firefox-0.1.16.xpi

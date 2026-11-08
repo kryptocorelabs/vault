@@ -8,7 +8,7 @@ A local password manager for Windows. Vault stores logins in an encrypted
 `.kcv` file on your device and uses the open-source
 [KryptoCore library](https://github.com/kryptocorelabs/kryptocore).
 
-[Desktop downloads](https://github.com/kryptocorelabs/vault/releases) · [Usage and recovery](USAGE.md) · [Firefox](FIREFOX.md)
+[Desktop downloads](https://github.com/kryptocorelabs/vault/releases) · [Usage and recovery](USAGE.md) · [Firefox 0.1.16 — signed](FIREFOX.md)
 
 <img src="vault-desktop.png" alt="Vault desktop showing synthetic logins in a dark tile layout, with the selected password hidden" width="500">
 
@@ -36,10 +36,10 @@ Use synthetic data for this development preview. See the
 
 **Public preview:** 0.1.0-preview.3 for Windows x64.
 
-**Release candidate:** Vault 0.1.0-rc.2 and Firefox 0.1.15 passed local
-tests for pairing, autofill, locking, and switching vaults. The Windows
-candidate is awaiting signing. The public releases page has no signed XPI
-for 0.1.15 yet.
+**Firefox add-on:** [Mozilla-signed 0.1.16](FIREFOX.md) is available for
+persistent installation; signature enforcement and restart persistence passed
+in Firefox 159.0.1. Windows Authenticode signing is still pending. Full current
+desktop/browser workflow testing is a separate release check.
 
 This repository hosts Vault downloads and release notes. The application
 source is maintained separately.

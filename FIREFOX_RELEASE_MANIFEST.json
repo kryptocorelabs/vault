@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "application": "KryptoCore Vault for Firefox",
+  "version": "0.1.16",
+  "tag": "firefox-v0.1.16",
+  "artifact": "KryptoCore-Vault-Firefox-0.1.16.xpi",
+  "bytes": 211321,
+  "sha256": "c7b14f08a86aeb84028a3d3e870489fe39876f2c08c095384dbce595532a4df9",
+  "extension_id": "vault@kryptocorelabs",
+  "mozilla_signed": true,
+  "signature_enforcement_verified": true,
+  "persistent_installation_verified": true,
+  "firefox_tested": "159.0.1",
+  "submitted_zip_sha256": "ef2cb1c84d1a2627afccd19b35326d9f7d4e4f469b0b8d7ec2ffec8555d6efc6",
+  "source_zip_sha256": "d46e55bcf98cb37e56263845b3c8826e847af83627db697e0fd14b87b624bbfb",
+  "full_desktop_browser_end_to_end_retested": false,
+  "independent_audit": false,
+  "source_repository": "kryptocorelabs/vault-source",
+  "program_source_commit": "51f9ba7f5306955ae99a95a771bb6c559da660bd"
+}

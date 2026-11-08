@@ -1,0 +1,50 @@
+{
+  "version": "0.1.16",
+  "addon_id": "vault@kryptocorelabs",
+  "sha256": "c7b14f08a86aeb84028a3d3e870489fe39876f2c08c095384dbce595532a4df9",
+  "payload_matches_submission": true,
+  "manifest_semantically_identical": true,
+  "signature_required": true,
+  "negative_checks": [
+    {
+      "case": "unsigned",
+      "rejected": true
+    },
+    {
+      "case": "tampered",
+      "rejected": true
+    }
+  ],
+  "states": [
+    {
+      "phase": "install",
+      "addon": {
+        "appDisabled": false,
+        "id": "vault@kryptocorelabs",
+        "isActive": true,
+        "signedState": 2,
+        "temporarilyInstalled": false,
+        "userDisabled": false,
+        "version": "0.1.16"
+      },
+      "signaturesRequired": true,
+      "signedConstant": 2
+    },
+    {
+      "phase": "restart",
+      "addon": {
+        "appDisabled": false,
+        "id": "vault@kryptocorelabs",
+        "isActive": true,
+        "signedState": 2,
+        "temporarilyInstalled": false,
+        "userDisabled": false,
+        "version": "0.1.16"
+      },
+      "signaturesRequired": true,
+      "signedConstant": 2
+    }
+  ],
+  "firefox_version": "159.0.1",
+  "restart_persistence_verified": true
+}
