@@ -4,7 +4,7 @@
 
 [Unreleased design preview](DESIGN.md)
 
-A local password manager for Windows. Vault stores logins in an encrypted
+A local password manager. Vault stores logins in an encrypted
 `.kcv` file on your device and uses the open-source
 [KryptoCore library](https://github.com/kryptocorelabs/kryptocore).
 
@@ -32,6 +32,10 @@ The unreleased [recovery hardening](RECOVERY-HARDENING.md) rotates the internal
 data key when resetting a password. It does not revoke old vault copies. Existing
 download assets have not been replaced; use the documented source/build identity
 to establish whether a build includes this fix. See the [threat model](THREAT_MODEL.md).
+
+The development source now includes [native Linux/macOS desktop builds](PLATFORMS.md)
+with the same local vault format. Firefox pairing remains Windows-only. Native
+CI artifacts are evaluation builds; existing download releases remain unchanged.
 
 ## Standalone development build
 
