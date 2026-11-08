@@ -1,5 +1,7 @@
 # KryptoCore Vault
 
+[Standalone Windows builds and requirements](PORTABLE.md)
+
 [Unreleased design preview](DESIGN.md)
 
 A local password manager for Windows. Vault stores logins in an encrypted
@@ -12,6 +14,14 @@ A local password manager for Windows. Vault stores logins in an encrypted
 
 *Development build with synthetic logins. The screenshot shows a newer local
 build than the linked download.*
+
+## Standalone development build
+
+The current local design build is `KryptoCore-Vault-Portable.exe`, containing
+Python, Qt, the Rust backend and the Firefox native host. It starts without
+running Setup.cmd. This is an unreleased local build; the older public preview
+below still uses its documented Python setup. See [standalone build checks](PORTABLE.md)
+and the [design preview](DESIGN.md) for scope and release limits.
 
 ## Try the desktop preview
 
