@@ -15,6 +15,12 @@ A local password manager for Windows. Vault stores logins in an encrypted
 *Development build with synthetic logins. The screenshot shows a newer local
 build than the linked download.*
 
+Testing to date has been carried out by the KryptoCoreLabs maintainers, locally
+and through automated CI. No independent security audit has been completed.
+We welcome community testing, code reviews and scrutiny of our security
+assumptions. Please use synthetic data and report suspected vulnerabilities
+privately through the project's security-reporting channel.
+
 ## Source and community
 
 [Browse the implementation](https://github.com/kryptocorelabs/vault-source) or

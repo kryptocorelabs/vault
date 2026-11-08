@@ -3,6 +3,12 @@
 Vault is a development preview for synthetic test data. See the
 [usage notes](USAGE.md) for encryption limits and recovery instructions.
 
+Testing to date has been carried out by the KryptoCoreLabs maintainers, locally
+and through automated CI. No independent security audit has been completed.
+We welcome community testing, code reviews and scrutiny of our security
+assumptions. Please use synthetic data and report suspected vulnerabilities
+privately through the project's security-reporting channel.
+
 ## Report a vulnerability
 
 Use **Security → Report a vulnerability** on the
