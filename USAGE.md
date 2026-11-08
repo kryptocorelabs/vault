@@ -1,8 +1,8 @@
 # Using Vault
 
 Vault is a local password manager. It encrypts saved logins in a `.kcv`
-file on your device. This development preview is for synthetic test data.
-Keep the original copies of any credentials elsewhere during evaluation.
+file on your device. Use synthetic credentials to evaluate the release
+candidate and keep original copies of any credentials separately.
 
 ## What encryption protects
 
@@ -49,15 +49,28 @@ an updated build. After a reset, make and test a fresh backup. If the emergency
 sheet itself may be exposed, renew it from the unlocked vault as well; older
 copies still retain their former recovery access.
 
-Vault cannot automatically detect that an authentic file is an older snapshot.
-When restoring a copy, check that it contains the expected recent entries.
+KCV1/KCV2 cannot detect that an authentic file is an older snapshot. The
+[optional KCV3 profile](EPOCHS.md) adds a local history check with documented
+limits. When restoring a copy, check the expected recent entries.
+
+## Move and review a vault — development builds
+
+Use **Settings → Export logins as JSON** for a deliberate plaintext transfer,
+then **Create a new vault from JSON** to use fresh key material, a new password
+and a new emergency sheet. Rescue's JSON array is also accepted. Existing files
+are preserved; protect the unencrypted JSON. See [the migration guide](MIGRATION.md).
+
+**Status** beside **Lock**, or **Settings → Vault status**, shows entries,
+recovery-slot availability, the last backup recorded here and the filesystem
+modification date. Unknown backup history stays unknown. A 180-day-old date
+prompts a check; this is not a security score or proof that a backup is readable.
 
 ## Security reports and rights
 
 Report suspected vulnerabilities through the
 [private reporting process](SECURITY.md). Use synthetic data for reproduction.
 
-We give no voluntary guarantee that this preview is error-free, that data
+We give no voluntary guarantee that this software is error-free, that data
 will remain available, or that every incident is recoverable. You manage
 where you store and verify your backups and recovery material. Statutory
 rights and any liability required by applicable law remain unaffected.

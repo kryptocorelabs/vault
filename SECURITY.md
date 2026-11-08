@@ -1,7 +1,7 @@
 # Vault security
 
-Vault is a development preview for synthetic test data. See the
-[usage notes](USAGE.md) for encryption limits and recovery instructions.
+Vault 0.1.0-rc.2 and Firefox 0.1.14 or later use the encrypted v5 channel.
+See the [usage notes](USAGE.md) for recovery instructions.
 
 Testing to date has been carried out by the KryptoCoreLabs maintainers, locally
 and through automated CI. No independent security audit has been completed.
@@ -41,6 +41,45 @@ and Qt widgets can create additional managed copies. Clearing a field or locking
 Vault does not guarantee erasure of all copies, swap or crash dumps. Do not rely
 on memory secrecy against a compromised process, user account or operating system.
 See the [Vault threat model](THREAT_MODEL.md) for trust boundaries.
+
+## Plaintext migration and local status
+
+The development [JSON migration workflow](MIGRATION.md) deliberately exports all
+login secrets to plaintext after explicit confirmation. Protect that file and
+its storage; deletion cannot guarantee erasure from snapshots or backups.
+Import validates the input and atomically creates a new KCV2 vault with fresh
+key material and a new GUI-generated emergency credential. It does not revoke
+old copies or rotate passwords at external services. The preview fingerprint
+detects an intervening file edit; it does not authenticate an export's sender.
+
+Vault status reports authenticated format/entry facts and untrusted local dates.
+Backup timestamps record successful GUI copies at a path, not continued existence
+or a restore test. A recovery slot does not prove that the user holds its matching
+emergency sheet. These indicators are not a security certification.
+
+## Firefox channel
+
+The Windows app and add-on use the same pinned Snow implementation of
+`Noise_NNpsk0_25519_ChaChaPoly_SHA256`. Vault displays a random one-time
+pairing code. Both endpoints use it as a pre-shared key for an encrypted
+session that provisions a separate long-term key. Pairing and regular requests
+use distinct Noise prologues. Each request uses fresh ephemeral keys. The
+native host relays framed ciphertext over a user-scoped named pipe.
+Existing v5 pairings carry over. Session-bound saving requires Firefox
+0.1.14 or later and Vault 0.1.0-rc.2.
+
+The active HTTPS origin and operation are inside the encrypted request.
+The add-on checks the active tab and document before filling and checks that
+the same unlocked vault session remains active. Strict mode requires the
+browser popup. The desktop locks on session lock, disconnect, and suspend.
+Firefox checks the session again before releasing a fill result. The native
+endpoint rejects save requests from expired or different vault sessions.
+
+This channel protects against passive observation and a relay impersonator
+without the pairing secret. The pairing code must be copied into the trusted
+extension UI. The extension, Vault processes, and Windows account can access
+plaintext while in use. A page can read the values inserted into its fields.
+An independent review of the integration and release artifacts is pending.
 
 ## Report a vulnerability
 
