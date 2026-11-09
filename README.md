@@ -1,34 +1,36 @@
 # KryptoCore Vault
 
-[Security in 30 seconds](SECURITY-IN-BRIEF.md) · [Recover without the main app](RESCUE-FIRST.md) · [Check a download](VERIFY-DOWNLOADS.md)
+**An open-source password manager for people who want to keep their logins on their own device.**
 
-[Standalone Windows builds and requirements](PORTABLE.md)
+After setup, save and open your logins offline in an encrypted `.kcv` file.
+No account or cloud service is required.
 
-[Unreleased design preview](DESIGN.md)
+**Windows x64 preview.** Try it with sample data. Setup requires Python 3.13 x64.
 
-A local password manager. Vault stores logins in an encrypted
-`.kcv` file on your device and uses the open-source
-[KryptoCore library](https://github.com/kryptocorelabs/kryptocore).
+[Download the Windows preview](https://github.com/kryptocorelabs/vault/releases/tag/v0.1.0-preview.3) · [Browse the source](https://github.com/kryptocorelabs/vault-source) · [Give feedback](https://github.com/kryptocorelabs/vault/issues)
 
-[Desktop downloads](https://github.com/kryptocorelabs/vault/releases) · [Usage and recovery](USAGE.md) · [Firefox 0.1.16 — signed](FIREFOX.md)
+## Try the desktop preview
+
+1. Download and extract the [Windows x64 desktop ZIP](https://github.com/kryptocorelabs/vault/releases/tag/v0.1.0-preview.3).
+2. Install Python 3.13 x64 with the Windows Python Launcher, then run `Setup.cmd` once.
+3. Open `Start-Vault.cmd`, create a test vault and save a fictional login.
+
+[Usage and backups](USAGE.md) · [Security in 30 seconds](SECURITY-IN-BRIEF.md) · [Check a download](VERIFY-DOWNLOADS.md)
 
 <img src="vault-desktop.png" alt="Vault desktop showing synthetic logins in a dark tile layout, with the selected password hidden" width="500">
 
 *Development build with synthetic logins. The screenshot shows a newer local
 build than the linked download.*
 
-Testing to date has been carried out by the KryptoCoreLabs maintainers, locally
-and through automated CI. No independent security audit has been completed.
-We welcome community testing, code reviews and scrutiny of our security
-assumptions. Please use synthetic data and report suspected vulnerabilities
-privately through the project's security-reporting channel.
+The maintainers test Vault locally and through CI. An independent security
+audit is pending. Use the [security policy](SECURITY.md) to report suspected
+vulnerabilities privately.
 
 ## Source and community
 
-[Browse the implementation](https://github.com/kryptocorelabs/vault-source) or
-read the [project charter](https://github.com/kryptocorelabs/kryptocore/blob/main/PROJECT_CHARTER.md). First-party code is MIT licensed;
-dependencies retain their own terms. Contributions and independent review are
-welcome. Source visibility does not change the documented preview limits.
+Vault uses the [KryptoCore encryption library](https://github.com/kryptocorelabs/kryptocore).
+Vault and its Firefox companion are open source under MIT. Dependencies retain
+their own licenses. Read the [project charter](https://github.com/kryptocorelabs/kryptocore/blob/main/PROJECT_CHARTER.md).
 
 The unreleased [recovery hardening](RECOVERY-HARDENING.md) rotates the internal
 data key when resetting a password. It does not revoke old vault copies. Existing
@@ -58,15 +60,6 @@ running Setup.cmd. This is an unreleased local build; the older public preview
 below still uses its documented Python setup. See [standalone build checks](PORTABLE.md)
 and the [design preview](DESIGN.md) for scope and release limits.
 
-## Try the desktop preview
-
-1. Download and extract the Windows x64 desktop ZIP.
-2. With Python 3.13 x64 installed, run `Setup.cmd` once.
-3. Open `Start-Vault.cmd` and create a test vault.
-
-Use synthetic data for this development preview. See the
-[usage notes](USAGE.md) for how to make and test copies of a vault.
-
 ## Release status
 
 **Public preview:** 0.1.0-preview.3 for Windows x64.
@@ -76,11 +69,6 @@ persistent installation; signature enforcement and restart persistence passed
 in Firefox 159.0.1. Windows Authenticode signing is still pending. Full current
 desktop/browser workflow testing is a separate release check.
 
-This repository hosts Vault downloads and release notes. The application and Firefox
-[source are open under MIT](https://github.com/kryptocorelabs/vault-source).
-Use the [security policy](SECURITY.md) to report a suspected vulnerability
-privately.
-
 ## Offline recovery companion
 
 [Rescue](https://github.com/kryptocorelabs/rescue) is a separate offline preview
@@ -88,3 +76,4 @@ for authenticating KCV1/KCV2 files and exporting records to a new plaintext
 JSON file. It requires the existing Vault password or a configured KCV2 recovery
 key. It does not reset the original password or repair damaged ciphertext.
 Use a working copy, retain backups, and protect the unencrypted export.
+See the [recovery guide](RESCUE-FIRST.md).
