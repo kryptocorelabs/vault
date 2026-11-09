@@ -25,6 +25,8 @@ this release does not configure automatic updates.
 2. Select **Firefox → Verbindungscode erstellen** in Vault.
 3. Paste the one-time code in the add-on and select **Verbinden**.
 4. Open a matching HTTPS sign-in page and choose **Login ausfüllen**.
+5. In Vault preview.4, open **Firefox**, check the displayed site and choose
+   **Einmal freigeben**. Return to Firefox and repeat the fill within 30 seconds.
    Check the fields before submitting the form yourself.
 
 Pairing is performed once. Existing compatible v5 pairings carry over when

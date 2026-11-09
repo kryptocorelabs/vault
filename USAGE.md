@@ -42,22 +42,19 @@ copies remain readable with the password or emergency sheet that matched them.
 If someone may have read a copy, also change the stored account passwords at
 their services; changing the vault password cannot revoke exposed credentials.
 
-The new unlocked password-change dialog retains the KCV2/KCV3 seed and existing
+The unlocked password-change dialog retains the KCV2–KCV4 seed and existing
 sheet by default. Its optional re-key mode generates a fresh seed and a replacement
 sheet. This is separate from resetting through a recovery credential below.
 
-The [unreleased recovery hardening](RECOVERY-HARDENING.md) also replaces the
-internal data key while retaining the current emergency sheet. Earlier builds
-kept that key when resetting the password. Keep a verified backup before trying
-an updated build. After a reset, make and test a fresh backup. If the emergency
-sheet itself may be exposed, renew it from the unlocked vault as well; older
-copies still retain their former recovery access.
+Starting with Windows preview.4, [emergency reset](RECOVERY-HARDENING.md)
+replaces the data key and keeps the current emergency sheet valid. Make and
+test a fresh backup after a reset. If the sheet itself may be exposed, renew
+it from the unlocked vault. Older copies retain their former recovery access.
 
-KCV1/KCV2 cannot detect that an authentic file is an older snapshot. The
-[optional KCV3 profile](EPOCHS.md) adds a local history check with documented
-limits. When restoring a copy, check the expected recent entries.
+KCV3 and KCV4 have a [local history check](EPOCHS.md) with documented limits.
+When restoring any copy, check the expected recent entries.
 
-## Move and review a vault — development builds
+## Move and review a vault
 
 Use **Settings → Export logins as JSON** for a deliberate plaintext transfer,
 then **Create a new vault from JSON** to use fresh key material, a new password
@@ -69,9 +66,9 @@ recovery-slot availability, the last backup recorded here and the filesystem
 modification date. Unknown backup history stays unknown. A 180-day-old date
 prompts a check; this is not a security score or proof that a backup is readable.
 
-## Password changes and file fingerprints — development builds
+## Password changes and file fingerprints
 
-Development builds also offer **Settings → Change vault password** with an
+Vault offers **Settings → Change vault password** with an
 optional new key/new emergency-sheet step and **File fingerprint (SHA-256)**
 for recording/comparing encrypted file snapshots. Old copies remain readable
 with matching credentials. See [access and integrity](ACCESS-AND-INTEGRITY.md).
