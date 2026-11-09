@@ -62,9 +62,9 @@ before filling credentials. Windows Authenticode signing is pending.
 
 ## Offline recovery companion
 
-[Rescue](https://github.com/kryptocorelabs/rescue) is a separate offline preview
-for authenticating KCV1/KCV2 files and exporting records to a new plaintext
-JSON file. It requires the existing Vault password or a configured KCV2 recovery
-key. It does not reset the original password or repair damaged ciphertext.
+[Rescue preview.4](https://github.com/kryptocorelabs/rescue/releases/tag/v0.1.0-preview.4)
+authenticates KCV1–KCV4 files offline and exports records to a new plaintext
+JSON file. It requires the matching Vault password or a configured recovery key
+for KCV2–KCV4. It leaves the input intact.
 Use a working copy, retain backups, and protect the unencrypted export.
 See the [recovery guide](RESCUE-FIRST.md).
